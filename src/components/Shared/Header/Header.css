@@ -1,0 +1,20 @@
+.main-header {
+    background-color: #fff;
+}
+a.navbar-brand img {
+    height: 50px;
+}
+.main-header .navbar-nav a {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    color: #222;
+}
+.main-header .navbar-nav a:hover{
+    text-decoration: none;
+    border-bottom: 2px solid #ff5a3c;
+    color: #ff5a3c;
+}
+.log-btn{
+    color: #fff !important;
+}
