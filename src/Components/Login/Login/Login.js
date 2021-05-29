@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
-import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
