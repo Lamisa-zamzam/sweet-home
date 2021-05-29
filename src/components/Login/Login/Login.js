@@ -60,7 +60,9 @@ const Login = () => {
                 sessionStorage.setItem("token", idToken);
                 history.replace(from);
             })
-            .catch(function (error) {});
+            .catch(function (error) {
+                handleErrorMessage(error);
+            });
     };
 
     // handles user info
@@ -80,6 +82,21 @@ const Login = () => {
         }
         setUser(newUser);
         handleAuthToken();
+    };
+
+    // handles facebook login
+    const handleFacebookLogin = () => {
+        const faceBookProvider = new firebase.auth.FacebookAuthProvider();
+        firebase
+            .auth()
+            .signInWithPopup(faceBookProvider)
+            .then((result) => {
+                const user = result.user;
+                handleUser(user.name, user.email, undefined, true);
+            })
+            .catch((error) => {
+                handleErrorMessage(error);
+            });
     };
 
     // handles error in case it occurs
@@ -166,11 +183,11 @@ const Login = () => {
         <Container>
             <form onSubmit={handleSubmit(onSubmit)} className="form-card">
                 <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD4qERDnuFM9cBrqRQdDv-fVwKcHHIQQ3lDQ&usqp=CAU"
-                    alt="Globetrotter"
+                    src="https://raw.githubusercontent.com/Lamisa-zamzam/sweet-home/home-page/src/images/logo.png"
+                    alt="Sweet Home"
                     className="logo"
                 />
-                <h3 style={{ display: "inline", marginLeft: "20px" }}>
+                <h3 style={{marginLeft: "20px" }}>
                     {user.isNewUser ? "Create an account" : "Log In"}
                 </h3>
                 <br />
@@ -323,7 +340,10 @@ const Login = () => {
                 </button>
                 <br />
                 <br />
-                <button className="social-media-btn">
+                <button
+                    className="social-media-btn"
+                    onClick={handleFacebookLogin}
+                >
                     <FontAwesomeIcon
                         icon={faFacebookSquare}
                         className="social-media-icon"
