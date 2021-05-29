@@ -1,0 +1,10 @@
+.search-bar{
+    margin: 0 auto;
+}
+.serach-area {
+    padding: 80px;
+    display: -webkit-inline-box;
+    margin: 0 auto;
+    width: 100%;
+    padding: 80px 20%;
+}
