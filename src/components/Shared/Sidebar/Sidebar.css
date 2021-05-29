@@ -1,0 +1,29 @@
+.sidebarContainer {
+    padding: 10%;
+    height: 100%;
+    background-color: rgb(80, 8, 8);
+    color: white;
+}
+
+.sidebarContainer a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.sidebarContainer h5 {
+    padding: 10% 5%;
+    margin: auto 0;
+}
+
+.sidebarIcon {
+    margin: auto 0;
+}
+
+.dashboardList {
+    color: white;
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+.dashboardList:hover {
+    text-decoration: none;
+}

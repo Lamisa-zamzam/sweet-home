@@ -5,4 +5,4 @@ export const firebaseConfig = {
     storageBucket: "sweet-home-910.appspot.com",
     messagingSenderId: "205102338819",
     appId: "1:205102338819:web:a34fabc5d875568b460f36"
-  };
+};
