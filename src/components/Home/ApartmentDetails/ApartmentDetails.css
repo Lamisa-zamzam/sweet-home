@@ -1,0 +1,43 @@
+.apartment-header {
+    background:linear-gradient(120deg, #ff593ca8, #000000ab),url(../../../images/slider-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+}
+.apartment-header h1{
+  text-align: center;
+}
+.apartment-detail{
+  padding: 100px 0;   
+}
+.apartment-title {
+  padding: 20px 0;
+  position: relative;
+}
+.apartment-title h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+.apartment-title h4{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff593c;
+}
+.apartment-detail p{
+  font-size: 18px;
+  color: #151515;
+}
+h4.price-detail {
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.sidebar{
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 100px 0;
+}

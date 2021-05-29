@@ -1,0 +1,39 @@
+.footer{
+    background: url(../../../images/footer-img.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 80px;
+}
+.widget-heading h4{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.about p{
+    color: #fff;
+    font-size: 15px;
+}
+.address ul li {
+    list-style: none;
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+.address ul,
+.quick-links ul {
+    padding: 0;
+    margin: 0;
+}
+.address ul li span{
+    color: red;
+    padding-right: 11px;
+}
+.quick-links ul li {
+    list-style: none;
+    padding-bottom: 4px;
+}
+.quick-links ul li a {
+    color: #fff;
+    font-size: 16px;
+}

@@ -8,3 +8,6 @@
     width: 100%;
     padding: 80px 20%;
 }
+.serach-area .form-control {
+    height: calc(1.8em + .75rem + 2px);
+}

@@ -3,8 +3,13 @@ import { Col, Card, Button } from 'react-bootstrap';
 import './Apartment.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router-dom';
 
 const Apartment = ({ap}) => {
+    const history = useHistory()
+    const handleBook = (id) => {
+        history.push(`/apartment/${id}`);
+    }
     return (
         <>
             <Col xs={12} md={4}>
@@ -17,7 +22,7 @@ const Apartment = ({ap}) => {
                     </Card.Body>
                     <div className="apartment-footer">
                         <h4 className="price">{ap.price}</h4>
-                        <Button className="apt-btn" variant="primary">View Details</Button>
+                        <Button onClick={() => handleBook(ap.id)} className="apt-btn" variant="primary">View Details</Button>
                     </div>
                 </Card>
             </Col>
