@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import Login from "./components/Login/Login/Login";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home/Home/Home";
+import ApartmentDetails from "./components/Home/ApartmentDetails/ApartmentDetails";
 
 export const UserContext = createContext();
 
@@ -20,6 +23,12 @@ function App() {
         <UserContext.Provider value={[user, setUser]}>
             <Router>
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/apartment/:id">
+                        <ApartmentDetails />
+                    </Route>
                     <Route path="/login">
                         <Login />
                     </Route>
