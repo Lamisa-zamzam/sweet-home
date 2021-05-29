@@ -1,0 +1,47 @@
+.section-heading h2 {
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 50px;
+}
+.apartment{
+    margin-bottom: 30px;
+}
+.apartment .card-title {
+    background-color: #ff5a3c;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0;
+}
+.apartment-footer {
+    position: relative;
+    padding: 0 15px 15px 15px;
+}
+.apartment .card-body p span{
+    color: #ff5a3c;
+    padding-right: 10px;
+}
+.apartment-footer button {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+.apartment-footer h4 {
+    font-weight: 700;
+    font-size: 25px;
+}
+button.apt-btn {
+    background-color: #ff5a3c;
+    border: 1px soild #ff5a3c !important;
+    border-color: #ff5a3c !important;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+button.apt-btn:hover{
+    background-color: #fff;
+    border: 1px soild #ff5a3c;
+    color: #ff5a3c;
+}
