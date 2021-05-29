@@ -64,8 +64,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 # sweet-home-2
-<<<<<<< HEAD
-# co-homes
-=======
 ### hello world
->>>>>>> c8c0202c07d082fb2ae59e185c6d0de74d1d2058
