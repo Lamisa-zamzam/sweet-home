@@ -18,7 +18,7 @@ const Header = () => {
                             <Link to="/">About</Link>
                             <Link to="/">Services</Link>
                             <Link to="/">Contact</Link>
-                            <Link to="/admin">Admin</Link>                            
+                            <Link to="/admin">Admin</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
