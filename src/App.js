@@ -11,6 +11,8 @@ import AddAHouse from "./components/Dashboard/AddAHouse/AddAHouse";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ManageServices from "../../complete-website-client/src/Components/Dashboard/ManageServices/ManageServices";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home/Home/Home";
 
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
@@ -31,6 +33,9 @@ function App() {
         <UserContext.Provider value={[user, setUser]}>
             <Router>
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
                     <Route path="/login">
                         <Login />
                     </Route>
