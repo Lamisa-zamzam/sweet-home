@@ -8,7 +8,7 @@ const Search = () => {
             <Container>
                 <div className="serach-area">
                     <input type="text" className="form-control" placeholder="Search Property"/>
-                    <button className="btn btn-primary">Find Now</button>
+                    <button className="apt-btn btn btn-primary">Find Now</button>
                 </div>
             </Container>
         </div>

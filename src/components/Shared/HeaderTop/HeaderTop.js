@@ -12,24 +12,24 @@ import { faPinterestP } from '@fortawesome/free-brands-svg-icons';
 const HeaderTop = () => {
     return (
         <div className="header-top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="top-bar-menu">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-7">
+                        <div className="top-bar-menu">
                             <ul>
                                 <li><a href="#"><span><FontAwesomeIcon icon={faEnvelope} /></span> info@webmail.com</a></li>
                                 <li><a href="#"><span><FontAwesomeIcon icon={faPhone} /></span> +8801700 000 000</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="top-bar-right text-right">
+                    <div className="col-md-5">
+                        <div className="top-bar-right text-right">
                             <ul>
-                                <li><a href=""><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                <li><a href=""><FontAwesomeIcon icon={faInstagram} /></a></li>
-                                <li><a href=""><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                <li><a href=""><FontAwesomeIcon icon={faPinterestP} /></a></li>
-                                <li><a href=""><FontAwesomeIcon icon={faYoutube} /></a></li>
+                                <li><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                <li><a href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                                <li><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                <li><a href="#"><FontAwesomeIcon icon={faPinterestP} /></a></li>
+                                <li><a href="#"><FontAwesomeIcon icon={faYoutube} /></a></li>
                             </ul>
                         </div>
                     </div>
