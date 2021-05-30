@@ -1,0 +1,11 @@
+.apartment-header {
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../../images/slider-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+  }
+  .apartment-header h1{
+    text-align: center;
+  }

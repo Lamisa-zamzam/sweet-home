@@ -1,38 +1,56 @@
-.App {
+.error {
+  color: red;
+}
+
+.logo {
+  border-radius: 100px;
+  width: 10%;
+}
+
+.brandBtn {
+  border: none;
+  background-color: rgb(131, 34, 34);
+  font-size: 15px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.dashboardContainer {
+  display: grid;
+  grid-template-columns: 20% 75%;
+  gap: 5%;
+}
+
+.dashboardFormContainer {
+  width: 80%;
+  padding: 0 0;
+}
+
+.dashboardTitle {
+  padding: 2%;
+  color: brown;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tableContainer {
+  display: grid;
+  grid-template-columns: 20% 79%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerRow {
+  height: 100px;
+  font-size: 20px;
+  font-weight: 650;
+  background-color: rgba(228, 233, 237, 1);
+  padding: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.colP {
+  font-size: 18px !important;
+  padding: 5% 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.statusCol {
+  padding-left: 6.5%;
 }
