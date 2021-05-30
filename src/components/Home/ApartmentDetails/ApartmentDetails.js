@@ -40,7 +40,7 @@ const ApartmentDetails = () => {
                             <p>{chosenHouse.shortDesc}</p>
                             <p>{chosenHouse.description}</p>
                             <h4 className="price-detail">Price Details-</h4>
-                            <p>Rent/Month: {chosenHouse.price}</p>
+                            <p>Rent/Month:{chosenHouse.price}</p>
                             <p>service Charge: {chosenHouse.serviceCharge}</p>
                             <p>
                                 security Deposit: {chosenHouse.securityDeposit}

@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login/Login/Login";
-import { createContext } from "react";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import "./App.css";
 import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
@@ -15,6 +14,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import ManageHouses from "./components/Dashboard/ManageHouses/ManageHouses";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ApartmentDetails from "./components/Home/ApartmentDetails/ApartmentDetails";
+import Book from "./components/Dashboard/Book/Book/Book";
 
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
@@ -27,6 +27,9 @@ function App() {
                 <Switch>
                     <Route path="/home">
                         <Home />
+                    </Route>
+                    <Route path="/book">
+                        <Book />
                     </Route>
                     <Route exact path="/">
                         <Home />

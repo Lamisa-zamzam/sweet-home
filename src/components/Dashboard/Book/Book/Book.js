@@ -24,7 +24,7 @@ const Book = () => {
 
     const { id } = useParams();
     const [chosenHouse, setChosenHouse] = useState({});
-    const { houseName, price } = chosenHouse;
+    const { houseName, price, _id } = chosenHouse;
     const history = useHistory();
     const email = sessionStorage.getItem("email");
 
@@ -39,7 +39,10 @@ const Book = () => {
     useEffect(() => {
         fetch(`https://shrouded-meadow-58285.herokuapp.com/house/${id}`)
             .then((res) => res.json())
-            .then((data) => setChosenHouse(data[0]));
+            .then((data) => {
+                setChosenHouse(data[0]);
+                console.log(data);
+            });
     }, [id]);
 
     // handles Payment submit
@@ -80,6 +83,7 @@ const Book = () => {
         const { name, email } = data;
         const date = new Date();
         const orderDetail = {
+            houseId: _id,
             name,
             email,
             houseName,
@@ -94,7 +98,7 @@ const Book = () => {
             status: "pending",
         };
 
-        fetch("https://shrouded-meadow-58285.herokuapp.com/placeOrder", {
+        fetch("http://localhost:5000/placeOrder", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(orderDetail),
@@ -216,6 +220,7 @@ const Book = () => {
                     </p>
                 )}
             </form>
+            <br />
             <p className="text-center">
                 <Link to="/">Want a different house? </Link>
             </p>

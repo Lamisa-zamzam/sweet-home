@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-// import data from '../../../data.json';
 import Apartment from "../Apartment/Apartment";
 
 const Apartments = () => {
