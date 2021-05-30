@@ -19,7 +19,6 @@ import ApartmentDetails from "./components/Home/ApartmentDetails/ApartmentDetail
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
 );
-export const UserContext = createContext();
 
 function App() {
     return (
