@@ -2,7 +2,6 @@ import React, { createContext, useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router";
-import Sidebar from "../../../Shared/Sidebar/Sidebar";
 import "./Book.css";
 import { Link } from "react-router-dom";
 
@@ -65,13 +64,8 @@ const Book = () => {
             setPaymentSuccess(paymentMethod.id);
             setPaymentError(null);
             const { id } = paymentMethod;
-            const {
-                brand,
-                exp_month,
-                exp_year,
-                last4,
-                funding,
-            } = paymentMethod.card;
+            const { brand, exp_month, exp_year, last4, funding } =
+                paymentMethod.card;
             setPaymentId(id);
             setPaymentBrand(brand);
             setCardExpireMonth(exp_month);
@@ -117,128 +111,114 @@ const Book = () => {
     };
 
     return (
-        <div className="bookingFieldContainer dashboardContainer">
-            <Sidebar />
-            <div className="dashboardFormContainer">
-                <h3 className="dashboardTitle">Rent Your Dream House</h3>
-                <br />
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                    <Form.Group>
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="Enter Your Name"
-                            {...register("name", { required: true })}
-                            defaultValue={name}
-                        />
-                        {errors.name && (
-                            <span className="error">
-                                This field is required
-                            </span>
-                        )}
-                    </Form.Group>
-                    <br />
-                    <Form.Group>
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="e.g. johndoe@gmail.com"
-                            {...register("email", { required: true })}
-                            defaultValue={email}
-                        />
-                        {errors.price && (
-                            <span className="error">
-                                This field is required
-                            </span>
-                        )}
-                    </Form.Group>
-                    <br />
-
-                    <Form.Group>
-                        <Form.Label>House you want to rent</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="house name"
-                            {...register("houseName")}
-                            defaultValue={houseName}
-                            disabled
-                        />
-                        {errors.houseName && (
-                            <span className="error">
-                                This field is required
-                            </span>
-                        )}
-                    </Form.Group>
-                    <br />
-                    <br />
-                    <br />
-                    {paymentSuccess ? (
-                        <Button
-                            type="submit"
-                            className="formSubmitButton brandBtn"
-                        >
-                            Rent House
-                        </Button>
-                    ) : (
-                        <p>
-                            Your will be ready to submit this form once your
-                            payment is successful.
-                        </p>
+        <div>
+            <h3 className="dashboardTitle">Rent Your Dream House</h3>
+            <br />
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form.Group>
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Enter Your Name"
+                        {...register("name", { required: true })}
+                        defaultValue={name}
+                    />
+                    {errors.name && (
+                        <span className="error">This field is required</span>
                     )}
-                </Form>
-                <h5>
-                    Your house rent charge will be <strong>{price}</strong>
-                </h5>
+                </Form.Group>
                 <br />
-                <form
-                    onSubmit={handlePaymentSubmit}
-                    style={{
-                        border: "2px solid rgba(210, 215, 211, 1)",
-                        padding: "4%",
-                        borderRadius: "5px",
-                        marginBottom: "15%",
-                    }}
-                >
-                    <CardElement
-                        options={{
-                            style: {
-                                base: {
-                                    fontSize: "16px",
-                                    color: "#424770",
-                                    "::placeholder": {
-                                        color: "#aab7c4",
-                                    },
-                                },
-                                invalid: {
-                                    color: "#9e2146",
+                <Form.Group>
+                    <Form.Label>Your Email</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="e.g. johndoe@gmail.com"
+                        {...register("email", { required: true })}
+                        defaultValue={email}
+                    />
+                    {errors.price && (
+                        <span className="error">This field is required</span>
+                    )}
+                </Form.Group>
+                <br />
+
+                <Form.Group>
+                    <Form.Label>House you want to rent</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="house name"
+                        {...register("houseName")}
+                        defaultValue={houseName}
+                        disabled
+                    />
+                    {errors.houseName && (
+                        <span className="error">This field is required</span>
+                    )}
+                </Form.Group>
+                <br />
+                <br />
+                <br />
+                {paymentSuccess ? (
+                    <Button
+                        type="submit"
+                        variant="primary"
+                        className="formSubmitButton apt-btn"
+                    >
+                        Rent House
+                    </Button>
+                ) : (
+                    <p>
+                        Your will be ready to submit this form once your payment
+                        is successful.
+                    </p>
+                )}
+            </Form>
+            <h5>
+                Your house rent charge will be <strong>{price}</strong>
+            </h5>
+            <br />
+            <form
+                onSubmit={handlePaymentSubmit}
+                style={{
+                    border: "2px solid rgba(210, 215, 211, 1)",
+                    padding: "4%",
+                    borderRadius: "5px",
+                    marginBottom: "15%",
+                }}
+            >
+                <CardElement
+                    options={{
+                        style: {
+                            base: {
+                                fontSize: "16px",
+                                color: "#424770",
+                                "::placeholder": {
+                                    color: "#aab7c4",
                                 },
                             },
-                        }}
-                    />
-                    <br />
-                    <br />
-                    <Button
-                        className="brandBtn"
-                        type="submit"
-                        disabled={!stripe}
-                    >
-                        Confirm Payment
-                    </Button>
-                    <br />
-                    <br />
-                    {paymentError && (
-                        <p style={{ color: "red" }}>{paymentError}</p>
-                    )}
-                    {paymentSuccess && (
-                        <p style={{ color: "green" }}>
-                            Your payment was successful
-                        </p>
-                    )}
-                </form>
-                <p className="text-center">
-                    <Link to="/">Want a different house? </Link>
-                </p>
-            </div>
+                            invalid: {
+                                color: "#9e2146",
+                            },
+                        },
+                    }}
+                />
+                <br />
+                <br />
+                <Button className="apt-btn" type="submit" disabled={!stripe}>
+                    Confirm Payment
+                </Button>
+                <br />
+                <br />
+                {paymentError && <p style={{ color: "red" }}>{paymentError}</p>}
+                {paymentSuccess && (
+                    <p style={{ color: "green" }}>
+                        Your payment was successful
+                    </p>
+                )}
+            </form>
+            <p className="text-center">
+                <Link to="/">Want a different house? </Link>
+            </p>
         </div>
     );
 };

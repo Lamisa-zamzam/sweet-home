@@ -5,7 +5,8 @@ import data from "../../../data.json";
 import { useParams } from "react-router-dom";
 import "./ApartmentDetails.css";
 import Footer from "../../Shared/Footer/Footer";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Book from "../../Dashboard/Book/Book/Book";
 
 const ApartmentDetails = () => {
     const { id } = useParams();
@@ -44,40 +45,7 @@ const ApartmentDetails = () => {
                     </Col>
                     <Col xs={12} md={4}>
                         <div className="sidebar">
-                            <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="Your Name"
-                                    />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="Phone Number"
-                                    />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Control
-                                        type="email"
-                                        placeholder="Email Address"
-                                    />
-                                </Form.Group>
-                                <Form.Group controlId="exampleForm.ControlTextarea1">
-                                    <Form.Control
-                                        as="textarea"
-                                        rows={3}
-                                        placeholder="Message..."
-                                    />
-                                </Form.Group>
-                                <Button
-                                    className="apt-btn"
-                                    variant="primary"
-                                    type="submit"
-                                >
-                                    Submit
-                                </Button>
-                            </Form>
+                            <Book />
                         </div>
                     </Col>
                 </Row>

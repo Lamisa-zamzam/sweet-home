@@ -36,41 +36,35 @@ function App() {
             <div className="main">
                 <Router>
                     <Switch>
+                        <Route path="/home">
+                            <Home/>
+                        </Route>
                         <Route exact path="/">
                             <Home />
                         </Route>
                         <Route path="/login">
                             <Login />
                         </Route>
-                        <Route path="/makeAdmin">
-                            <MakeAdmin />
-                        </Route>
-                        <Route path="/makeAdmin">
-                            <MakeAdmin />
-                        </Route>
-                        <Route exact path="/dashboard">
+                        <PrivateRoute exact path="/dashboard">
                             <Dashboard />
-                        </Route>
-                        <Route path="/dashboard/bookings">
+                        </PrivateRoute>
+                        <PrivateRoute path="/dashboard/bookings">
                             <Bookings />
-                        </Route>
-                        <Route path="/dashboard/AddAHouse">
+                        </PrivateRoute>
+                        <PrivateRoute path="/dashboard/AddAHouse">
                             <AddAHouse />
-                        </Route>
-                        <Route path="/dashboard/makeAdmin">
+                        </PrivateRoute>
+                        <PrivateRoute path="/dashboard/makeAdmin">
                             <MakeAdmin />
-                        </Route>
-                        <Route path="/dashboard/ManageHouses">
+                        </PrivateRoute>
+                        <PrivateRoute path="/dashboard/ManageHouses">
                             <ManageHouses />
-                        </Route>
-                        <Route path="/dashboard/book/:id">
+                        </PrivateRoute>
+                        <PrivateRoute path="/apartment/:id">
                             <Elements stripe={stripePromise}>
-                                <Book />
+                                <ApartmentDetails />
                             </Elements>
-                        </Route>
-                        <Route path="/apartment/:id">
-                            <ApartmentDetails />
-                        </Route>
+                        </PrivateRoute>
                     </Switch>
                 </Router>
             </div>

@@ -35,17 +35,6 @@ const Sidebar = () => {
                 <strong>Sweet Home</strong>
             </h3>
             <hr style={{ color: "white" }} />
-            {!isAdmin && (
-                <Link to={`/dashboard/book/${id}`}>
-                    <div className="dashboardList">
-                        <FontAwesomeIcon
-                            className="sidebarIcon"
-                            icon={faShoppingCart}
-                        />{" "}
-                        <h5>Rent a House</h5>
-                    </div>
-                </Link>
-            )}
             <Link to="/dashboard/bookings">
                 {" "}
                 <div

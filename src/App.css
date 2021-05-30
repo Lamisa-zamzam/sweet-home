@@ -9,7 +9,7 @@
 
 .brandBtn {
   border: none;
-  background-color: rgb(131, 34, 34);
+  background-color: #ff593c !important;
   font-size: 15px;
   padding: 10px;
   color: white;
@@ -29,7 +29,7 @@
 
 .dashboardTitle {
   padding: 2%;
-  color: brown;
+  color: #ff593c;
   text-align: center;
 }
 
