@@ -16,8 +16,8 @@ const Apartment = ({ap}) => {
                 <Card className="apartment">
                     <Card.Img variant="top" src={ap.img} />
                     <Card.Title>{ap.title}</Card.Title>
-                    <Card.Body> 
-                        <p><span><FontAwesomeIcon icon={faMapMarkerAlt} /></span> {ap.address}</p>                      
+                    <Card.Body>
+                        <p><span><FontAwesomeIcon icon={faMapMarkerAlt} /></span> {ap.address}</p>
                         <Card.Text>{ap.shortDesc}</Card.Text>
                     </Card.Body>
                     <div className="apartment-footer">

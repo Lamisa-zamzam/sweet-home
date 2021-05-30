@@ -109,7 +109,7 @@ const Book = () => {
             .then((success) => {
                 if (success) {
                     alert(
-                        "Your visa order placed successfully!! Thank you for depending on us."
+                        "Your house rent placed successfully!! Thank you for depending on us."
                     );
                     history.push("/");
                 }
@@ -120,7 +120,7 @@ const Book = () => {
         <div className="bookingFieldContainer dashboardContainer">
             <Sidebar />
             <div className="dashboardFormContainer">
-                <h3 className="dashboardTitle">Book Your Visa</h3>
+                <h3 className="dashboardTitle">Rent Your Dream House</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group>
@@ -155,15 +155,15 @@ const Book = () => {
                     <br />
 
                     <Form.Group>
-                        <Form.Label>Visa you want to order</Form.Label>
+                        <Form.Label>House you want to rent</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="visa name"
-                            {...register("visaName")}
+                            placeholder="house name"
+                            {...register("houseName")}
                             defaultValue={serviceName}
                             disabled
                         />
-                        {errors.visaName && (
+                        {errors.houseName && (
                             <span className="error">
                                 This field is required
                             </span>
@@ -177,7 +177,7 @@ const Book = () => {
                             type="submit"
                             className="formSubmitButton brandBtn"
                         >
-                            Order Visa
+                            Rent House
                         </Button>
                     ) : (
                         <p>
@@ -236,7 +236,7 @@ const Book = () => {
                     )}
                 </form>
                 <p className="text-center">
-                    <Link to="/">Want a different visa? </Link>
+                    <Link to="/">Want a different house? </Link>
                 </p>
             </div>
         </div>
