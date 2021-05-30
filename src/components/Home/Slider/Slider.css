@@ -35,7 +35,17 @@
         height: 40px;
     }
     
+    
   }
   @media (min-width: 320px) and (max-width: 767px) {
-    
+    .top-bar-right {
+        text-align: center !important;
+        padding-top: 20px;
+    }
+    .section-heading h2 {
+        font-size: 30px;
+    }
+    .feature-img {
+        padding-bottom: 50px;
+    }
   }
