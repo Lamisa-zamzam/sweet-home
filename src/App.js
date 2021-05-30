@@ -7,7 +7,6 @@ import { createContext, useState } from "react";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import "./App.css";
 import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
-import Book from "./components/Dashboard/Book/Book/Book";
 import Bookings from "./components/Dashboard/Bookings/Bookings";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import AddAHouse from "./components/Dashboard/AddAHouse/AddAHouse";
@@ -16,7 +15,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import ManageHouses from "./components/Dashboard/ManageHouses/ManageHouses";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ApartmentDetails from "./components/Home/ApartmentDetails/ApartmentDetails";
-// 01716
+
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
 );
@@ -37,7 +36,7 @@ function App() {
                 <Router>
                     <Switch>
                         <Route path="/home">
-                            <Home/>
+                            <Home />
                         </Route>
                         <Route exact path="/">
                             <Home />

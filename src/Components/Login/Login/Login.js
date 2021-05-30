@@ -93,6 +93,8 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 handleUser(user.name, user.email, undefined, true);
+                sessionStorage.setItem("email", user.email);
+                sessionStorage.setItem("name", user.name);
             })
             .catch((error) => {
                 handleErrorMessage(error);
@@ -117,6 +119,8 @@ const Login = () => {
                 .then((userCredential) => {
                     const { email } = userCredential.user;
                     handleUser(name, email, undefined, true);
+                    sessionStorage.setItem("email", email);
+                    sessionStorage.setItem("name", name);
                     handleAuthToken();
                 })
                 .catch((error) => {
@@ -137,6 +141,7 @@ const Login = () => {
             .then((userCredential) => {
                 const { email } = userCredential.user;
                 handleUser(undefined, email, undefined, true);
+                sessionStorage.setItem("email", email);
             })
             .catch((error) => {
                 handleErrorMessage(error);

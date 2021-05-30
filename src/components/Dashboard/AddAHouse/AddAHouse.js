@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
-import axios from "axios";
 
 const AddAHouse = () => {
     const [error, setError] = useState(null);

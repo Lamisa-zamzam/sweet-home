@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import {
     faClipboardList,
-    faCommentDots,
     faPlusCircle,
-    faShoppingCart,
     faTasks,
     faUserShield,
 } from "@fortawesome/free-solid-svg-icons";
@@ -14,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Sidebar = () => {
     const email = sessionStorage.getItem("email");
     const [isAdmin, setIsAdmin] = useState(false);
+    console.log(email);
 
     useEffect(() => {
         fetch(
@@ -23,6 +22,7 @@ const Sidebar = () => {
             .then((data) => {
                 if (data[0]) {
                     setIsAdmin(true);
+                    console.log(data[0])
                 }
             });
     }, [email]);
