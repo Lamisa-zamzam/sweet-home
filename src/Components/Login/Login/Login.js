@@ -19,12 +19,16 @@ import {
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { setNewUser } from "../../../redux/actions/userActions";
+import { connect } from "react-redux";
+
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
-const Login = () => {
-    const [user, setUser] = useContext(UserContext);
+const Login = (props) => {
+    const { setNewUser, user } = props;
+    // const [user, setUser] = useContext(UserContext);
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
@@ -80,7 +84,7 @@ const Login = () => {
         if (whetherLoggedIn !== undefined) {
             newUser.isLoggedIn = true;
         }
-        setUser(newUser);
+        setNewUser(newUser);
         handleAuthToken();
     };
 
@@ -106,7 +110,7 @@ const Login = () => {
         const errorMessage = error.message;
         const newUser = { ...user };
         newUser.error = errorMessage;
-        setUser(newUser);
+        setNewUser(newUser);
     };
 
     // Register with email and password
@@ -129,7 +133,7 @@ const Login = () => {
         } else {
             const newUser = { ...user };
             newUser.error = "Your Passwords don't match";
-            setUser(newUser);
+            setNewUser(newUser);
         }
     };
 
@@ -163,7 +167,7 @@ const Login = () => {
         const newUser = { ...user };
         newUser.isNewUser = !newUser.isNewUser;
         newUser.error = "";
-        setUser(newUser);
+        setNewUser(newUser);
     };
 
     const [password, setPassword] = useState();
@@ -373,4 +377,14 @@ const Login = () => {
     );
 };
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        user: state.user,
+    };
+};
+
+const mapDispatchToProps = {
+    setNewUser: setNewUser,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

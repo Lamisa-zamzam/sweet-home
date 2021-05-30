@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login/Login/Login";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import "./App.css";
 import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
@@ -22,52 +22,42 @@ const stripePromise = loadStripe(
 export const UserContext = createContext();
 
 function App() {
-    const [user, setUser] = useState({
-        name: "",
-        email: "",
-        photoURL: "",
-        isNewUser: true,
-        isLoggedIn: false,
-        error: "",
-    });
     return (
-        <UserContext.Provider value={[user, setUser]}>
-            <div className="main">
-                <Router>
-                    <Switch>
-                        <Route path="/home">
-                            <Home />
-                        </Route>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route path="/login">
-                            <Login />
-                        </Route>
-                        <PrivateRoute exact path="/dashboard">
-                            <Dashboard />
-                        </PrivateRoute>
-                        <PrivateRoute path="/dashboard/bookings">
-                            <Bookings />
-                        </PrivateRoute>
-                        <PrivateRoute path="/dashboard/AddAHouse">
-                            <AddAHouse />
-                        </PrivateRoute>
-                        <PrivateRoute path="/dashboard/makeAdmin">
-                            <MakeAdmin />
-                        </PrivateRoute>
-                        <PrivateRoute path="/dashboard/ManageHouses">
-                            <ManageHouses />
-                        </PrivateRoute>
-                        <PrivateRoute path="/apartment/:id">
-                            <Elements stripe={stripePromise}>
-                                <ApartmentDetails />
-                            </Elements>
-                        </PrivateRoute>
-                    </Switch>
-                </Router>
-            </div>
-        </UserContext.Provider>
+        <div className="main">
+            <Router>
+                <Switch>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                    <PrivateRoute exact path="/dashboard">
+                        <Dashboard />
+                    </PrivateRoute>
+                    <PrivateRoute path="/dashboard/bookings">
+                        <Bookings />
+                    </PrivateRoute>
+                    <PrivateRoute path="/dashboard/AddAHouse">
+                        <AddAHouse />
+                    </PrivateRoute>
+                    <PrivateRoute path="/dashboard/makeAdmin">
+                        <MakeAdmin />
+                    </PrivateRoute>
+                    <PrivateRoute path="/dashboard/ManageHouses">
+                        <ManageHouses />
+                    </PrivateRoute>
+                    <PrivateRoute path="/apartment/:id">
+                        <Elements stripe={stripePromise}>
+                            <ApartmentDetails />
+                        </Elements>
+                    </PrivateRoute>
+                </Switch>
+            </Router>
+        </div>
     );
 }
 

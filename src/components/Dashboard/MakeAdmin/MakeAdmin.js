@@ -21,7 +21,6 @@ const MakeAdmin = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                console.log(result);
                 if (result) {
                     alert("Admin added successfully!!");
                     window.location.reload();

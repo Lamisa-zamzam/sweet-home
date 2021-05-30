@@ -12,7 +12,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Sidebar = () => {
     const email = sessionStorage.getItem("email");
     const [isAdmin, setIsAdmin] = useState(false);
-    console.log(email);
 
     useEffect(() => {
         fetch(
@@ -22,7 +21,6 @@ const Sidebar = () => {
             .then((data) => {
                 if (data[0]) {
                     setIsAdmin(true);
-                    console.log(data[0])
                 }
             });
     }, [email]);

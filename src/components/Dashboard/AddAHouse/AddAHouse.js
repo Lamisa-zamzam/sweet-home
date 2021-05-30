@@ -42,8 +42,6 @@ const AddAHouse = () => {
             addFacilities,
         };
 
-        console.log(house);
-
         fetch("http://shrouded-meadow-58285.herokuapp.com/addHouse", {
             method: "POST",
             headers: { "content-type": "application/json" },
