@@ -24,8 +24,8 @@ const Book = () => {
     const [payedWith, setPayedWith] = useState(null);
 
     const { id } = useParams();
-    const [chosenService, setChosenService] = useState({});
-    const { serviceName, price } = chosenService;
+    const [chosenHouse, setChosenHouse] = useState({});
+    const { houseName, price } = chosenHouse;
     const history = useHistory();
     const email = sessionStorage.getItem("email");
 
@@ -38,9 +38,9 @@ const Book = () => {
     const name = sessionStorage.getItem("name");
 
     useEffect(() => {
-        fetch(`https://shrouded-meadow-58285.herokuapp.com/service/${id}`)
+        fetch(`https://shrouded-meadow-58285.herokuapp.com/house/${id}`)
             .then((res) => res.json())
-            .then((data) => setChosenService(data[0]));
+            .then((data) => setChosenHouse(data[0]));
     }, [id]);
 
     // handles Payment submit
@@ -88,7 +88,7 @@ const Book = () => {
         const orderDetail = {
             name,
             email,
-            serviceName,
+            houseName,
             price,
             paymentId,
             paymentBrand,
@@ -160,7 +160,7 @@ const Book = () => {
                             type="text"
                             placeholder="house name"
                             {...register("houseName")}
-                            defaultValue={serviceName}
+                            defaultValue={houseName}
                             disabled
                         />
                         {errors.houseName && (
@@ -187,7 +187,7 @@ const Book = () => {
                     )}
                 </Form>
                 <h5>
-                    Your service charge will be <strong>{price}</strong>
+                    Your house rent charge will be <strong>{price}</strong>
                 </h5>
                 <br />
                 <form

@@ -3,19 +3,19 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
 
 const ManageHouses = () => {
-    const [services, setServices] = useState([]);
+    const [houses, setHouses] = useState([]);
 
     useEffect(() => {
-        fetch("https://shrouded-meadow-58285.herokuapp.com/services")
+        fetch("https://shrouded-meadow-58285.herokuapp.com/houses")
             .then((res) => res.json())
             .then((result) => {
-                setServices(result);
+                setHouses(result);
             });
     }, []);
 
-    const handleServiceDelete = (_id) => {
+    const handleHouseDelete = (_id) => {
         fetch(
-            `https://shrouded-meadow-58285.herokuapp.com/deleteService/${_id}`,
+            `https://shrouded-meadow-58285.herokuapp.com/deletehouse/${_id}`,
             {
                 method: "DELETE",
             }
@@ -23,7 +23,7 @@ const ManageHouses = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data) {
-                    alert("Your service has been deleted.");
+                    alert("Your House has been deleted.");
                     window.location.reload();
                 } else {
                     alert("Something unexpected happened. Please try again.");
@@ -38,7 +38,7 @@ const ManageHouses = () => {
                 <Row className="headerRow">
                     <Col md={2}></Col>
                     <Col md={3} style={{ marginLeft: "-3%" }}>
-                        Service Name
+                        House Name
                     </Col>
                     <Col md={4} style={{ marginLeft: "6%" }}>
                         Detail
@@ -47,27 +47,27 @@ const ManageHouses = () => {
                     <Col md={1}></Col>
                 </Row>
                 <br />
-                {services.map((service) => (
-                    <Row key={service._id}>
+                {houses.map((house) => (
+                    <Row key={house._id}>
                         <Col md={2}>
                             <img
-                                src={service.imageURL}
+                                src={house.imageURL}
                                 alt=""
                                 style={{ width: "100%" }}
                             />
                         </Col>
                         <Col md={2}>
                             <p className="colP">
-                                <strong>{service.serviceName}</strong>
+                                <strong>{house.houseName}</strong>
                             </p>
                         </Col>
                         <Col md={4}>
-                            <p className="colP">{service.detail}</p>
+                            <p className="colP">{house.detail}</p>
                         </Col>
                         <Col md={1}></Col>
                         <Col md={1}>
                             <p className="colP">
-                                <strong>{service.price}</strong>
+                                <strong>{house.price}</strong>
                             </p>
                         </Col>
                         <Col md={2} className="statusCol">
@@ -76,7 +76,7 @@ const ManageHouses = () => {
                                     backgroundColor: "red",
                                     border: "none",
                                 }}
-                                onClick={() => handleServiceDelete(service._id)}
+                                onClick={() => handleHouseDelete(house._id)}
                             >
                                 Delete
                             </Button>

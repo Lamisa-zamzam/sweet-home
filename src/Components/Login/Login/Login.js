@@ -9,6 +9,7 @@ import "./Login.css";
 //firebase
 import firebase from "firebase/app";
 import "firebase/auth";
+import { firebaseConfig } from "./firebase.config";
 
 // font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +18,6 @@ import {
     faGoogle,
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { firebaseConfig } from "./Firebase.config";
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);

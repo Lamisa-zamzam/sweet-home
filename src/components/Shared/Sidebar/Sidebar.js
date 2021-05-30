@@ -60,7 +60,7 @@ const Sidebar = () => {
                 </div>
             </Link>
             {isAdmin && (
-                <Link to="/dashboard/addService">
+                <Link to="/dashboard/addAHouse">
                     {" "}
                     <div className="dashboardList">
                         <FontAwesomeIcon
@@ -83,7 +83,7 @@ const Sidebar = () => {
                 </Link>
             )}
             {isAdmin && (
-                <Link to="/dashboard/manageServices">
+                <Link to="/dashboard/manageHouses">
                     <div className="dashboardList">
                         <FontAwesomeIcon
                             className="sidebarIcon"

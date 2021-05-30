@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 
 const UserBookings = ({ order }) => {
-    const { serviceName, status } = order;
-    const [chosenService, setChosenService] = useState({});
+    const { houseName, status } = order;
+    const [chosenHouse, setChosenHouse] = useState({});
 
     useEffect(() => {
         fetch(
-            `https://shrouded-meadow-58285.herokuapp.com/service?serviceName=${serviceName}`
+            `https://shrouded-meadow-58285.herokuapp.com/house?houseName=${houseName}`
         )
             .then((res) => res.json())
             .then((data) => {
-                setChosenService(data[0]);
+                setChosenHouse(data[0]);
             });
-    }, [serviceName]);
+    }, [houseName]);
 
     return (
         <Col
@@ -29,7 +29,7 @@ const UserBookings = ({ order }) => {
         >
             <div style={{ display: "grid", gridTemplateColumns: "50% 50%" }}>
                 <img
-                    src={chosenService && chosenService.imageURL}
+                    src={chosenHouse && chosenHouse.imageURL}
                     alt=""
                     style={{ width: "80%", borderRadius: "100%" }}
                 />
@@ -47,8 +47,8 @@ const UserBookings = ({ order }) => {
                     <strong>{status}</strong>
                 </h2>
             </div>
-            <h3>{serviceName}</h3>
-            <p>{chosenService && chosenService.detail}</p>
+            <h3>{houseName}</h3>
+            <p>{chosenHouse && setChosenHouse.detail}</p>
         </Col>
     );
 };

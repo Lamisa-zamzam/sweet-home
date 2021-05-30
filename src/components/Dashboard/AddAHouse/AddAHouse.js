@@ -13,18 +13,18 @@ const AddAHouse = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-        const { detail, price, serviceName } = data;
-        const service = { detail, price, serviceName, imageURL };
+        const { detail, price, houseName } = data;
+        const house = { detail, price, houseName, imageURL };
 
-        fetch("https://shrouded-meadow-58285.herokuapp.com/addService", {
+        fetch("https://shrouded-meadow-58285.herokuapp.com/addHouse", {
             method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(service),
+            body: JSON.stringify(house),
         })
             .then((res) => res.json())
             .then((result) => {
                 if (result) {
-                    alert("Your service has been added successfully!!");
+                    alert("Your house has been added successfully!!");
                     window.location.reload();
                 }
             });
@@ -51,17 +51,17 @@ const AddAHouse = () => {
         <div className="dashboardContainer">
             <Sidebar />
             <div className="dashboardFormContainer">
-                <h3 className="dashboardTitle">Add A service</h3>
+                <h3 className="dashboardTitle">Add A House</h3>
                 <br />
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group>
-                        <Form.Label>Service Name</Form.Label>
+                        <Form.Label>House Name</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter Service Name"
-                            {...register("serviceName", { required: true })}
+                            placeholder="Enter House Name"
+                            {...register("houseName", { required: true })}
                         />
-                        {errors.serviceName && (
+                        {errors.houseName && (
                             <span className="error">
                                 This field is required
                             </span>
@@ -84,7 +84,7 @@ const AddAHouse = () => {
                     <br />
 
                     <Form.Group>
-                        <Form.Label>Upload Service Image</Form.Label>
+                        <Form.Label>Upload House Image</Form.Label>
                         <br />
                         <Form.Control
                             type="file"
@@ -95,7 +95,7 @@ const AddAHouse = () => {
                     <br />
 
                     <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Service Detail</Form.Label>
+                        <Form.Label>House Detail</Form.Label>
                         <Form.Control
                             as="textarea"
                             rows={3}

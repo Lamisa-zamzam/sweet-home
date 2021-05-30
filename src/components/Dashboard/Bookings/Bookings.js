@@ -58,7 +58,7 @@ const Bookings = () => {
                     <Row className="headerRow">
                         <Col md={2}>Name</Col>
                         <Col md={3}>Email</Col>
-                        <Col md={2}>Service</Col>
+                        <Col md={2}>House</Col>
                         <Col md={3}>Payed With</Col>
                         <Col md={2}>Status</Col>
                     </Row>

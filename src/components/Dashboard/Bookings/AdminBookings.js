@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Form, Row } from "react-bootstrap";
 
 const AdminBookings = ({ order, handleStatusChange }) => {
-    const { name, email, serviceName, payedWith, status, _id } = order;
+    const { name, email, houseName, payedWith, status, _id } = order;
     return (
         <Row>
             <Col md={2}>
@@ -13,7 +13,7 @@ const AdminBookings = ({ order, handleStatusChange }) => {
             </Col>
             <Col md={1}></Col>
             <Col md={2}>
-                <p className="colP">{serviceName}</p>
+                <p className="colP">{houseName}</p>
             </Col>
             <Col md={2}>
                 <p className="colP">{payedWith}</p>
