@@ -12,6 +12,7 @@ const UserBookings = ({ order }) => {
             .then((res) => res.json())
             .then((data) => {
                 setChosenHouse(data[0]);
+                console.log(data);
             });
     }, [houseName]);
 
