@@ -44,7 +44,7 @@ const AddAHouse = () => {
 
         console.log(house);
 
-        fetch("http://localhost:5000/addHouse", {
+        fetch("http://shrouded-meadow-58285.herokuapp.com/addHouse", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(house),
