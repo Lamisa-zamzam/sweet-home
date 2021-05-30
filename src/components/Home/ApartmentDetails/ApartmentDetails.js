@@ -31,7 +31,11 @@ const ApartmentDetails = () => {
                 <Row>
                     <Col xs={12} md={8}>
                         <div className="apartment-detail">
-                            <img src={chosenHouse.img} alt="Apartment" />
+                            <img
+                                src={chosenHouse.img}
+                                className="img-fluid"
+                                alt="Apartment Banner"
+                            />
                             <div className="apartment-title">
                                 <h3>{chosenHouse.title}</h3>
                                 <h4>{chosenHouse.price}</h4>
