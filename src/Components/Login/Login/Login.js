@@ -28,7 +28,6 @@ if (!firebase.apps.length) {
 
 const Login = (props) => {
     const { setNewUser, user } = props;
-    // const [user, setUser] = useContext(UserContext);
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 

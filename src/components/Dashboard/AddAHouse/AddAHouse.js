@@ -52,6 +52,8 @@ const AddAHouse = () => {
                 if (result) {
                     alert("Your house has been added successfully!!");
                     window.location.reload();
+                }else{
+                    setError("Something went wrong, please try again.")
                 }
             });
     };
