@@ -1,0 +1,34 @@
+.header-top-area{
+   background-color: #0b2c3d;
+   padding: 10px 0;
+}
+.top-bar-menu > ul,
+.top-bar-right > ul {
+    padding: 0;
+    margin: 0;
+}
+.top-bar-menu > ul > li,
+.top-bar-right > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+.top-bar-right > ul > li{  
+    margin: 0 15px 0 0;
+}
+.top-bar-menu ul li a,
+.top-bar-right ul li a  {
+    color: #fff;
+}
+.top-bar-menu ul li a:hover{
+    text-decoration: none;
+}
+.top-bar-right ul li a:hover{
+    color: #ff5a3c;
+}
+.top-bar-menu ul li a span{
+    color: #ff5a3c;
+    padding-right: 10px;
+}
