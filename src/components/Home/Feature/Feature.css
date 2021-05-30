@@ -1,0 +1,35 @@
+.features{
+    padding: 80px 0;
+}
+.single-fea-1,
+.single-fea-2,
+.single-fea-3,
+.single-fea-4{
+    position: relative;
+    margin-bottom: 40px;
+}
+.single-fea-1 .fea-text,
+.single-fea-2 .fea-text,
+.single-fea-3 .fea-text,
+.single-fea-4 .fea-text {
+    position: absolute;
+    top: 0;
+    left: 19%;
+}
+.icon span {
+    font-size: 40px;
+    color: #ff5a3c;
+}
+.feature-area h3 {
+    color: #151515;
+    font-size: 32px;
+    font-weight: 700;
+}
+.feature-area p.content {
+    padding: 12px 0;
+}
+.fea-text h4 {
+    font-size: 18px;
+    color: #151515;
+    font-weight: 700;
+}

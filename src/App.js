@@ -1,20 +1,21 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./Components/Home/Home/Home";
+import Home from "./components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./Components/Login/Login/Login";
+import Login from "./components/Login/Login/Login";
 import { createContext, useState } from "react";
-import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import "./App.css";
-import MakeAdmin from "./Components/Dashboard/MakeAdmin/MakeAdmin";
-import Book from "./Components/Dashboard/Book/Book/Book";
-import Bookings from "./Components/Dashboard/Bookings/Bookings";
-import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
-import AddAHouse from "./Components/Dashboard/AddAHouse/AddAHouse";
+import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
+import Book from "./components/Dashboard/Book/Book/Book";
+import Bookings from "./components/Dashboard/Bookings/Bookings";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import AddAHouse from "./components/Dashboard/AddAHouse/AddAHouse";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import ManageHouses from "./Components/Dashboard/ManageHouses/ManageHouses";
+import ManageHouses from "./components/Dashboard/ManageHouses/ManageHouses";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ApartmentDetails from "./components/Home/ApartmentDetails/ApartmentDetails";
 // 01716
 const stripePromise = loadStripe(
     "pk_test_51IeJOnEbOwJYaM8zeiKuT8tF911nK1hHgA9uH77BP8Atf5XymHXR3XIlI8w8QIv5P19rA3Li3bfz15bVuK0aw9dF00MnyVJpef"
@@ -66,6 +67,9 @@ function App() {
                             <Elements stripe={stripePromise}>
                                 <Book />
                             </Elements>
+                        </Route>
+                        <Route path="/apartment/:id">
+                            <ApartmentDetails />
                         </Route>
                     </Switch>
                 </Router>
