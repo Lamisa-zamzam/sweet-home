@@ -8,8 +8,10 @@ import { useHistory } from "react-router-dom";
 const Apartment = ({ ap }) => {
     const history = useHistory();
     const handleBook = (id) => {
+        console.log(id);
         history.push(`/apartment/${id}`);
     };
+
     return (
         <>
             <Col xs={12} md={4}>
@@ -28,7 +30,7 @@ const Apartment = ({ ap }) => {
                     <div className="apartment-footer">
                         <h4 className="price">{ap.price}</h4>
                         <Button
-                            onClick={() => handleBook(ap.id)}
+                            onClick={() => handleBook(ap._id)}
                             className="apt-btn"
                             variant="primary"
                         >
