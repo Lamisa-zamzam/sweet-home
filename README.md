@@ -24,7 +24,7 @@ Our project includes:
 10.  [Stipe Payment Method](https://stripe.com/).
 
 ### RoadMap
-=> improving the Sidebar of the Dashboard using Flex-grow
+=> improving the Sidebar of the Dashboard using Flex-grow\
 => solving errors with CRUD operation
 
 ### Contributing
