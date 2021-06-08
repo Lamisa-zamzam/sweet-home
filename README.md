@@ -1,69 +1,31 @@
-# Getting Started with Create React App
+# Sweet Home
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## House rental website
 
-## Available Scripts
+This responsive project provides a number of houses which you can rent. It also has [Firebase Authentication System](https://firebase.google.com/docs?authuser=0) for better user experience. You can create an account using email and password or Google. There is a card for each house and by clicking the 'see details' button, if you are logged in, you go to the booking page and you can pay with credit card and rent it. Your renting data will be saved to the database [Mongodb](https://www.mongodb.com/). Through the admin page, you are allowed to add and delete any service and make another admin through the make admin page. You can see all the orders that you have made on our website in the booking list page and if you are an admin, you can see all the orders that have been made by the users and edit the status of any house rent that a user has made. Last but not least, this website uses private routing form [React Router](https://reactrouter.com/), [Redux](https://redux.js.org/) for state management and [React Hook Form](https://react-hook-form.com/) for form validation.
 
-### `npm start`
+# Open [Our Live Site](https://sweet-home-910.web.app/) to see how it works.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### You can also visit [Our server](https://shrouded-meadow-58285.herokuapp.com/) form where we are loading data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Our server side code link: [https://github.com/Lamisa-zamzam/sweet-home-server](https://github.com/Lamisa-zamzam/sweet-home-server)
 
-### `npm test`
+Our project includes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  [React](https://reactjs.org/docs/getting-started.html),
+2.  [React Router](https://reactrouter.com/),
+3.  [React-Bootstrap](https://react-bootstrap.github.io/),
+4.  [Font Awesome](https://fontawesome.com/),
+5.  [Firebase](https://firebase.google.com/docs?authuser=0),
+6.  [React Hook Form](https://react-hook-form.com/),
+7.  [My own APIs to load data](https://powerful-springs-02476.herokuapp.com),
+8.  [Redux](https://redux.js.org/),
+9.  [Bootstrap](https://getbootstrap.com/) and
+10.  [Stipe Payment Method](https://stripe.com/).
 
-### `npm run build`
+### RoadMap
+=> improving the Sidebar of the Dashboard using Flex-grow
+=> solving errors with CRUD operation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# sweet-home
+### Contributing
+Pull requsts are welcome. We are working in a team, so be our mate today. For major changes, please open a issue first and discuss what you would like to change. 
